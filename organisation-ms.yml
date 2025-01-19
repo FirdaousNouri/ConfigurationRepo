@@ -1,0 +1,10 @@
+spring: 
+  datasource:
+    url: jdbc:h2:mem:organisationdb
+  cloud:
+    discovery: 
+      enabled: true
+
+
+server:
+  port: 8082
