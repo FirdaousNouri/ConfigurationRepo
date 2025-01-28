@@ -7,6 +7,24 @@ spring:
       discovery:
         locator:
           lower-case-service-id: true
+      routes:
+        
+        - id: r1
+          uri: lb://USER-MS
+          predicates:
+            - Path=/users/**
+
+        
+        - id: r2
+          uri: lb://DONATION-MS
+          predicates:
+            - Path=/donations/**
+
+        
+        - id: r3
+          uri: lb://ORGANISATION-MS
+          predicates:
+            - Path=/organisations/**
 
 server:
   port: 8080
